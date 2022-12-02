@@ -7,22 +7,16 @@ const Home = () => {
       <motion.div 
          className="home container"
          animate={{
-            marginTop: 200,
-            opacity: 0.2,
-            rotateZ: 180
+            
          }}
       >
-         <motion.h2 animate={{
-            fontSize: 50,
-            color: "#ff2994",
-            x: 100
-         }}>
+         <h2>
             Welcome to Pizza Joint
-         </motion.h2>
+         </h2>
          <Link to="/base">
             <motion.button
                animate={{
-                  scale: 1.5
+                  
                }}
             >
                Create Your Pizza
