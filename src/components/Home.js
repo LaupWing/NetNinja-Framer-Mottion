@@ -14,7 +14,7 @@ const Home = () => {
          }}
          transition={{
             delay: 1.5,
-            duration: 5
+            duration: 1.5
          }}
       >
          <h2>

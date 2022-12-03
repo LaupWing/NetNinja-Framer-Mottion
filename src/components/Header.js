@@ -27,6 +27,11 @@ const Header = () => {
                y: -10,
                opacity: 1
             }}
+            transition={{
+               delay: 0.2,
+               type: "spring",
+               stiffness: 120
+            }}
          >
             <h1>Pizza Joint</h1>
          </motion.div>
