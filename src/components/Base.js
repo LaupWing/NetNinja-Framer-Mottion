@@ -67,8 +67,6 @@ const Base = ({ addBase, pizza }) => {
          {pizza.base && (
             <motion.div 
                className="next"
-               initial="hidden"
-               animate="visible"
                variants={nextVariants}
             >
                <Link to="/toppings">
