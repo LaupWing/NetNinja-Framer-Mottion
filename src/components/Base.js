@@ -17,6 +17,19 @@ const containerVariants = {
    }
 }
 
+const nextVariants = {
+   hidden: {
+      x: "100vw"
+   },
+   visible: {
+      x: 0,
+      transition:{
+         type: "spring",
+         stiffness: 120
+      }
+   }
+}
+
 const Base = ({ addBase, pizza }) => {
    const bases = ["Classic", "Thin & Crispy", "Thick Crust"]
 
@@ -54,16 +67,9 @@ const Base = ({ addBase, pizza }) => {
          {pizza.base && (
             <motion.div 
                className="next"
-               initial={{
-                  x: "-100vw"
-               }}
-               animate={{
-                  x: 0
-               }}
-               transition={{
-                  type: "spring",
-                  stiffness: 120
-               }}
+               initial="hidden"
+               animate="visible"
+               variants={nextVariants}
             >
                <Link to="/toppings">
                   <motion.button
