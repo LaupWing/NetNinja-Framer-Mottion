@@ -13,7 +13,8 @@ const containerVariants = {
          type: "spring",
          mass: 0.4,
          damping: 8,
-         when: "beforeChildren"
+         when: "beforeChildren",
+         staggerChildren: 0.4
       }
    }
 }
