@@ -46,7 +46,10 @@ function App() {
                   />
                </Route>
                <Route path="/order">
-                  <Order pizza={pizza} />
+                  <Order 
+                     setShowModal={setShowModal}
+                     pizza={pizza} 
+                  />
                </Route>
                <Route path="/">
                   <Home />
