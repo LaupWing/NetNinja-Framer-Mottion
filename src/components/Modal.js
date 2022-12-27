@@ -11,6 +11,20 @@ const backdrop = {
    }
 }
 
+const modal = {
+   visible: {
+      opacity: 1,
+      y: "200px",
+      transtion:{
+         delay: 0.5
+      }
+   },
+   hidden: {
+      y: "-100vh",
+      opacity: 0
+   }
+}
+
 const Modal = ({showModal}) => {
    return (
       <AnimatePresence exitBeforeEnter>
@@ -20,8 +34,12 @@ const Modal = ({showModal}) => {
                variants={backdrop}
                animate="visible"
                initial="hidden"
+               exit="hidden"
             >
-               <motion.div className="modal">
+               <motion.div 
+                  className="modal"
+                  variants={modal}
+               >
                   <p>Want to make another pizza?</p>
                   <Link to={"/"}>
                      <button>Start again</button>
